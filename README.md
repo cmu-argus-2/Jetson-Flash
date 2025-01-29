@@ -183,5 +183,5 @@ gst-launch-1.0 nvarguscamerasrc sensor-id=$SENSOR_ID ! "video/x-raw(memory:NVMM)
 ```
 SENSOR_ID=0 
 FRAMERATE=14
-gst-launch-1.0 nvarguscamerasrc num-buffers=1 sensor_id=0 ! 'video/x-raw(memory:NVMM), width=4608, height=2592, framerate=14/1, format=NV12' ! nvjpegenc ! filesink location=RidgeRun_test.jpg
+gst-launch-1.0 nvarguscamerasrc num-buffers=1 sensor_id=$SENSOR_ID ! 'video/x-raw(memory:NVMM), width=4608, height=2592, framerate=$FRAMERATE/1, format=NV12' ! nvjpegenc ! filesink location=RidgeRun_test.jpg
 ```
