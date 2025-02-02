@@ -72,6 +72,7 @@
 						#size-cells = <0>;
 						csi_chan0: channel@0 {
 							reg = <0>;
+							status = "okay";
 							ports {
 								#address-cells = <1>;
 								#size-cells = <0>;
@@ -95,6 +96,7 @@
 						};
 						csi_chan1: channel@1 {
 							reg = <1>;
+							status = "okay";
 							ports {
 								#address-cells = <1>;
 								#size-cells = <0>;
@@ -118,6 +120,7 @@
 						};
 						csi_chan2: channel@2 {
 							reg = <2>;
+							status = "okay";
 							ports {
 								#address-cells = <1>;
 								#size-cells = <0>;
@@ -141,6 +144,7 @@
 						};
 						csi_chan3: channel@3 {
 							reg = <3>;
+							status = "okay";
 							ports {
 								#address-cells = <1>;
 								#size-cells = <0>;
@@ -166,6 +170,7 @@
 				};
 
 				i2c@3180000 {
+					status = "okay";
 					tca9548@70 {
 						i2c_0: i2c@0 {
 							imx708_cam0: argus_imx708_a@1a {
@@ -225,7 +230,9 @@
 				
 									port@0 {
 										reg = <0>;
+										status = "okay";
 										argus_imx708_out0: endpoint {
+											status = "okay";
 											port-index = <0>;
 											bus-width = <2>;
 											remote-endpoint = <&argus_imx708_csi_in0>;
@@ -292,6 +299,7 @@
 				
 									port@0 {
 										reg = <0>;
+										status = "okay";
 										argus_imx708_out1: endpoint {
 											status = "okay";
 											port-index = <1>;
@@ -360,7 +368,9 @@
 				
 									port@0 {
 										reg = <0>;
+										status = "okay";
 										argus_imx708_out2: endpoint {
+											status = "okay";
 											port-index = <2>;
 											bus-width = <2>;
 											remote-endpoint = <&argus_imx708_csi_in2>;
@@ -427,6 +437,7 @@
 				
 									port@0 {
 										reg = <0>;
+										status = "okay";
 										argus_imx708_out3: endpoint {
 											status = "okay";
 											port-index = <3>;
@@ -455,8 +466,8 @@
 				modules {
 					cam_module0: module0 {
 						status = "okay";
-						badge = "jakku_left_RBPCV3";
-						position = "left";
+						badge = "jakku_bottomleft_RBPCV3";
+						position = "bottomleft";
 						orientation = "1";
 						cam_module0_drivernode0: drivernode0 {
 							pcl_id = "v4l2_sensor";
@@ -464,8 +475,8 @@
 						};
 					};
 					cam_module1: module1 {
-						badge = "jakku_right_RBPCV3";
-						position = "right";
+						badge = "jakku_bottomright_RBPCV3";
+						position = "bottomright";
 						orientation = "1";
 						cam_module1_drivernode0: drivernode0 {
 							pcl_id = "v4l2_sensor";
@@ -474,8 +485,8 @@
 					};
 					cam_module2: module2 {
 						status = "okay";
-						badge = "jakku_front_RBPCV3";
-						position = "front";
+						badge = "jakku_centerleft_RBPCV3";
+						position = "centerleft";
 						orientation = "1";
 						cam_module2_drivernode0: drivernode0 {
 							pcl_id = "v4l2_sensor";
@@ -483,8 +494,8 @@
 						};
 					};
 					cam_module3: module3 {
-						badge = "jakku_rear_RBPCV3";
-						position = "rear";
+						badge = "jakku_centerright_RBPCV3";
+						position = "centerright";
 						orientation = "1";
 						cam_module3_drivernode0: drivernode0 {
 							pcl_id = "v4l2_sensor";

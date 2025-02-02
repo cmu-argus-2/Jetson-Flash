@@ -39,9 +39,10 @@
 						#size-cells = <0>;
 						skip_mux_detect = "yes";
 						/*force_bus_start = <0x1E>; */
-						vcc-supply = <&vdd_1v8_ls>;
+						// vcc-supply = <&vdd_1v8_ls>;
 						status = "okay";
 						i2c@0 {
+							status = "okay";
 							reg = <0>;
 							i2c-mux,deselect-on-exit;
 							#address-cells = <1>;
@@ -51,6 +52,7 @@
 							};
 						};
 						i2c@1 {
+							status = "okay";
 							reg = <1>;
 							i2c-mux,deselect-on-exit;
 							#address-cells = <1>;
@@ -60,6 +62,7 @@
 							};
 						};						
 						i2c@2 {
+							status = "okay";
 							reg = <2>;
 							i2c-mux,deselect-on-exit;
 							#address-cells = <1>;
@@ -69,6 +72,7 @@
 							};
 						};						
 						i2c@3 {
+							status = "okay";
 							reg = <3>;
 							i2c-mux,deselect-on-exit;
 							#address-cells = <1>;
