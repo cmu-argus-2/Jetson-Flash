@@ -33,13 +33,13 @@ export DEVDIR=<install-path>/Linux_for_Tegra
 git clone git@github.com:RidgeRun/NVIDIA-Jetson-IMX708-RPIV3.git
 cd NVIDIA-Jetson-IMX708-RPIV3/patches_orin_nano
 ```
-3. Then you will need the patch in the directory Linux_for_Tegra/sources by running:
+3. Then you will need the patch in the directory Linux_for_Tegra/source by running:
 ```
-cp -r patches/ $DEVDIR/Linux_for_Tegra/sources
+cp -r patches/ $DEVDIR/Linux_for_Tegra/source
 ```
 4. Next, you can then apply the patch and go back to the Linux_for_Tegra directory.
 ```
-cd $DEVDIR/sources
+cd $DEVDIR/source
 git apply patches/6.0_orin_nano_imx708_v0.1.0.patch
 cd ..
 ```
@@ -50,7 +50,7 @@ source/hardware/nvidia/t23x/nv-public/overlay/tegra234-p3768-camera-rpicam3-imx7
 ```
 
 ### Set up the toolchain
-1. You will need to download the toolchain to compile the sources:
+1. You will need to download the toolchain to compile the source:
 ```
 mkdir $HOME/l4t-gcc
 cd $HOME/l4t-gcc
@@ -60,13 +60,13 @@ tar -xjf aarch64--glibc--stable-2022.08-1
 ```
 2. Create output directories and aliases:
 ```
-KERNEL_OUT=$DEVDIR/sources/kernel_out
-MODULES_OUT=$DEVDIR/sources/modules_out
+KERNEL_OUT=$DEVDIR/source/kernel_out
+MODULES_OUT=$DEVDIR/source/modules_out
 mkdir -p $KERNEL_OUT
 mkdir -p $MODULES_OUT
 
 export INSTALL_MOD_PATH=$DEVDIR/rootfs/
-export KERNEL_HEADERS=$DEVDIR/sources/kernel/kernel-jammy-src
+export KERNEL_HEADERS=$DEVDIR/source/kernel/kernel-jammy-src
 
 export CROSS_COMPILE=$HOME/l4t-gcc/aarch64--glibc--stable-2022.08-1/bin/aarch64-buildroot-linux-gnu-
 ```
@@ -85,7 +85,7 @@ Once the flash is complete, the linux desktop should appear on the monitor. Comp
 
 ### Compile the Kernel
 ```
-cd $DEVDIR/sources
+cd $DEVDIR/source
 
 make -C kernel/kernel-jammy-src/ ARCH=arm64 O=$KERNEL_OUT LOCALVERSION=-tegra CROSS_COMPILE=${CROSS_COMPILE_AARCH64} defconfig
 make -C kernel/kernel-jammy-src/ ARCH=arm64 O=$KERNEL_OUT LOCALVERSION=-tegra CROSS_COMPILE=${CROSS_COMPILE_AARCH64} menuconfig
