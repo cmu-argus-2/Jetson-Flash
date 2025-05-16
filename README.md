@@ -35,7 +35,7 @@ cd NVIDIA-Jetson-IMX708-RPIV3/patches_orin_nano
 ```
 3. Then you will need the patch in the directory Linux_for_Tegra/source by running:
 ```
-cp -r patches/ $DEVDIR/Linux_for_Tegra/source
+cp -r patches/ $DEVDIR/source
 ```
 4. Next, you can then apply the patch and go back to the Linux_for_Tegra directory.
 ```
@@ -55,8 +55,8 @@ source/hardware/nvidia/t23x/nv-public/overlay/tegra234-p3768-camera-rpicam3-imx7
 mkdir $HOME/l4t-gcc
 cd $HOME/l4t-gcc
 
-wget -O toolchain.tar.xz https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v3.0/toolchain/aarch64--glibc--stable-2022.08-1.tar.bz2
-tar -xjf aarch64--glibc--stable-2022.08-1
+wget https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v3.0/toolchain/aarch64--glibc--stable-2022.08-1.tar.bz2
+tar -xf aarch64--glibc--stable-2022.08-1.tar.bz2
 ```
 2. Create output directories and aliases:
 ```
