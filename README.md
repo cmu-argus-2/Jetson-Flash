@@ -49,6 +49,11 @@ source/hardware/nvidia/t23x/nv-public/overlay/tegra234-camera-rpicam3-imx708.dts
 source/hardware/nvidia/t23x/nv-public/overlay/tegra234-p3768-camera-rpicam3-imx708.dtsi
 ```
 
+6. Change the value for `cvb_eeprom_read_size` from 0x100 to 0x0 in file
+```
+$DEVDIR/bootloader/generic/BCT/tegra234-mb2-bct-misc-p3767-0000.dts
+```
+
 ### Set up the toolchain
 1. You will need to download the toolchain to compile the source:
 ```
