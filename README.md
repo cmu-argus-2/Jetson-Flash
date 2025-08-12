@@ -1,9 +1,9 @@
 # Jetson-Flash
-## Jetson Orin Nano (8GB + w/ SD Card slot) on Dev Kit board
+## Jetson Orin Nano (8GB) on Argus' Jetson carrier board
 
 ### Create build directory
 Following https://docs.nvidia.com/jetson/archives/r36.3/DeveloperGuide/IN/QuickStart.html
-1. Download the Jetpack 6.0 / Jetson Linux 36.3 release package and sample file system for your Jetson developer kit from https://developer.nvidia.com/linux-tegra
+1. On a computer running Ubuntu 22.04, download the Jetpack 6.0 / Jetson Linux 36.3 release package and sample file system for your Jetson developer kit from https://developer.nvidia.com/linux-tegra
 2. Enter the following commands to untar the files and assemble the rootfs:
 ```
 $ tar xf ${L4T_RELEASE_PACKAGE}
